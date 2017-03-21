@@ -15,8 +15,10 @@ cd ${PWD}
 
 # Run program
 srun -n 1 ./serial ${INPUT}
-upcrun -n $P -shared-heap=1G ./pgen ${INPUT}
 
+rm pgen*.out
+rm *.err
+upcrun -n $P -shared-heap=1G ./pgen ${INPUT}
 cat pgen*.out > pgen.out
 
 # Sort contigs in both output files to compare

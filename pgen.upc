@@ -203,7 +203,7 @@ int main(int argc, char *argv[]){
 	////////////////////////////////////////////////////////////
 	char filename[20];
   	sprintf (filename, "pgen%d.out", MYTHREAD);
-  	printf(filename);
+//  	printf(filename);
 
   	FILE* output_file = fopen(filename, "w");
 
@@ -236,7 +236,7 @@ int main(int argc, char *argv[]){
 	  totBases += strlen(cur_contig);
 	}
 	fclose(output_file);
-	printf("Generated %lld contigs with %lld total bases\n", contigID, totBases);
+//	printf("Generated %lld contigs with %lld total bases\n", contigID, totBases);
 
 
 	upc_barrier;
